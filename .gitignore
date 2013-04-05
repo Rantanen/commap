@@ -1,0 +1,5 @@
+/node_modules
+/src/public/maps/amerish
+/src/public/maps/esamir
+/src/public/maps/indar
+*.swp

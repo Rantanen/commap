@@ -1,0 +1,146 @@
+body {
+    width: 100%;
+    background: black;
+    padding: auto;
+    font-family: "Calibri", "Sans-Serif";
+}
+
+#page {
+    display: none;
+    background: white;
+    padding: 0;
+    margin: auto;
+    width: 1024px;
+}
+#page h1 {
+    background: #a3f;
+    padding: 20px;
+}
+
+#content {
+    padding: 10px 20px 30px 20px;
+}
+
+#outfits {
+    font-size: 120%;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: white;
+    display: none;
+    padding: 1em 2em;
+}
+
+#outfits h1 {
+    font-size: 1em;
+    margin: 0em;
+    margin-bottom: 1em;
+}
+
+#outfits .outfit {
+    margin: 0.1em 0em;
+}
+
+#outfits .name {
+    float: left;
+    width: 5em;
+}
+
+img {
+    display: block;
+    margin: 10px;
+}
+
+#map-layer {
+    position: absolute;
+    background: #222;
+    width: 100%;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+
+#map {
+    background: black;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 50px;
+}
+
+#map-controls {
+    color: white;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 50px;
+    padding: 0px;
+    margin: 0px;
+}
+
+#map-status {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    background: white;
+}
+
+#map-layer .map-controls {
+}
+
+#map-layer .map-controls .active {
+    background: #444 !important;
+}
+
+#map-layer .map-controls .button {
+    background: black;
+    border: solid 1px white;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    color: white;
+}
+
+#map-layer .map-controls .button img {
+    width: 64px;
+    height: 64px;
+}
+
+#map-controls div.control {
+    margin: auto;
+    text-align: center;
+    padding: 5px;
+    color: white;
+    border-bottom: solid 2px white;
+}
+
+#map-layer .map-owner-label {
+    color: white;
+    font-weight: bold;
+    font-size: 120%;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black,
+                -1px -1px black, -1px 1px black, 1px 1px black, 1px -1px black;
+}
+
+#map-layer #login {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background: white;
+    z-index: 1000;
+}
+
+#under-construction {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 200px;
+    z-index: 9999;
+    color: red;
+    font-size: 500%;
+    text-align: center;
+}
+
