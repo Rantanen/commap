@@ -4,6 +4,11 @@
 <link rel="stylesheet" href="style.css" />
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
+<link rel="stylesheet" href="css/gh-fork-ribbon.css" />
+<!--[if IE]>
+<link rel="stylesheet" href="gh-fork-ribbon.ie.css" />
+<![endif]-->
+
 <link rel="stylesheet" href="js/leaflet/dist/leaflet.css" />
 <!--[if lte IE 8]>
     <link rel="stylesheet" href="js/leaflet/dist/leaflet.ie.css" />
@@ -19,83 +24,18 @@
 </script>
 </head>
 <body>
-    <div id="page">
-        <h1>
-            Cobalt VS Command Backup Mumble
-        </h1>
-
-        <div id="content">
-            <h2> Server information: </h2>
-            <pre>
-    Address:  cobalt.jubjubnest.net
-    Port:     64738 (default)
-    Username: Character name on Cobalt
-            </pre>
-
-            <h2> Connecting to multiple Mumble-servers </h2>
-
-            Some outfits and players already use Mumble for communication. The following instructions are aimed at these players so they can run Mumble connected to different servers at the same time. These instructions accomplish the following.
-
-            <ul>
-                <li> Connect to two Mumble servers at the same time.
-                <li> Use different push-to-talk keys for the servers.
-                <li> Try to make it as easy as possible.
-            </ul>
-
-            <h3> 1. Create a new Mumble copy </h3>
-
-            Create a copy of the current Mumble folder. This should be somewhere under <tt>C:\Program Files\</tt> by default. The new copy can be made anywhere on the computer. In the image below it has been made next to the original Mumble installation.
-
-            <img src="mumble-copy.png">
-
-            <h3> 2. Create a shortcut </h3>
-
-            Create a shortcut of the new Mumble executable and give it the <tt>-m mumble://<i>name</i>@cobalt.jubjubnest.net</tt> command line option. The <tt>-m</tt> lets us launch Mumble a second time and the URL makes it auto-connect to the Cobalt server.
-
-            <img src="mumble-shortcut.png">
-
-            <h3> 3. Create an empty mumble.ini </h3>
-
-            Last step to make this new Mumble installation independant of the original one is to create an empty <tt>mumble.ini</tt> file in the new Mumble folder. This file prevents Mumble from using the settings of the original one from the registry.
-
-            <img src="mumble-ini.png">
-
-            <h3> Done! -- Well... almost</h3>
-
-            The new Mumble installation can now be launched from the shortcut and it should open up in its own window. This installation knows nothing of the original one so you will need to configure it just like you did the first time you launched the original Mumble. Below are some things that might be meaningful in some ways.
-
-            <ul>
-                <li> Set up a push-to-talk key.
-                <li> Set up a DIFFERENT push-to-talk key than your other Mumble.
-                <li> Disable the overlay. Does it even work in Planetside? In any case two Mumble versions trying to use the overlay won't end well.
-            </ul>
-        </div>
-
-    </div>
-
-    <div id="outfits">
-        <h1>Members in game</h1>
-        <div id="outfits_list"></div>
-    </div>
-
     <div id="map-layer">
-        <div id="map-controls">
-            <div class="control">&lt;&lt;</div>
-            <div class="control" id="map-update-btn">
-                Update
-            </div>
-        </div>
         <div id="map">
         </div>
-        <form id="login" action="javascript:;">
-            <input type="text" name="name" placeholder="Character name">
-            <input type="submit" value="Sign In">
+    </div>
+
+    <div id="header">
+    </div>
+
+    <div class="github-fork-ribbon-wrapper right-bottom">
+        <div class="github-fork-ribbon">
+            <a href="https://github.com/Rantanen/commap">Fork me on GitHub</a>
         </div>
     </div>
-
-    <div id="under-construction">
-        Under development
-    </div>
-
 </body>
 </html>
