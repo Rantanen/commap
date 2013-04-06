@@ -1,54 +1,7 @@
 body {
     width: 100%;
     background: black;
-    padding: auto;
     font-family: "Calibri", "Sans-Serif";
-}
-
-#page {
-    display: none;
-    background: white;
-    padding: 0;
-    margin: auto;
-    width: 1024px;
-}
-#page h1 {
-    background: #a3f;
-    padding: 20px;
-}
-
-#content {
-    padding: 10px 20px 30px 20px;
-}
-
-#outfits {
-    font-size: 120%;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    background: white;
-    display: none;
-    padding: 1em 2em;
-}
-
-#outfits h1 {
-    font-size: 1em;
-    margin: 0em;
-    margin-bottom: 1em;
-}
-
-#outfits .outfit {
-    margin: 0.1em 0em;
-}
-
-#outfits .name {
-    float: left;
-    width: 5em;
-}
-
-img {
-    display: block;
-    margin: 10px;
 }
 
 #map-layer {
@@ -56,7 +9,7 @@ img {
     background: #222;
     width: 100%;
     right: 0px;
-    top: 0px;
+    top: 30px;
     bottom: 0px;
 }
 
@@ -66,24 +19,7 @@ img {
     top: 0px;
     bottom: 0px;
     left: 0px;
-    right: 50px;
-}
-
-#map-controls {
-    color: white;
-    position: absolute;
-    top: 0px;
     right: 0px;
-    width: 50px;
-    padding: 0px;
-    margin: 0px;
-}
-
-#map-status {
-    position: absolute;
-    bottom: 5px;
-    left: 5px;
-    background: white;
 }
 
 #map-layer .map-controls {
@@ -121,16 +57,48 @@ img {
     color: white;
     font-weight: bold;
     font-size: 120%;
-    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black,
-                -1px -1px black, -1px 1px black, 1px 1px black, 1px -1px black;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black, -1px -1px black, -1px 1px black, 1px 1px black, 1px -1px black;
 }
 
-#map-layer #login {
+#header {
     position: absolute;
-    left: 10px;
-    top: 10px;
-    background: white;
-    z-index: 1000;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 10px 20px;
+    height: 33px;
+
+    color: white;
+
+    background: -moz-linear-gradient(top,  rgba(7,43,52,1) 0%, rgba(5,71,76,1) 54%, rgba(99,204,204,1) 57%, rgba(11,114,132,1) 60%, rgba(9,79,92,1) 80%, rgba(7,43,52,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(7,43,52,1)), color-stop(54%,rgba(5,71,76,1)), color-stop(57%,rgba(99,204,204,1)), color-stop(60%,rgba(11,114,132,1)), color-stop(80%,rgba(9,79,92,1)), color-stop(100%,rgba(7,43,52,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(7,43,52,1) 0%,rgba(5,71,76,1) 54%,rgba(99,204,204,1) 57%,rgba(11,114,132,1) 60%,rgba(9,79,92,1) 80%,rgba(7,43,52,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(7,43,52,1) 0%,rgba(5,71,76,1) 54%,rgba(99,204,204,1) 57%,rgba(11,114,132,1) 60%,rgba(9,79,92,1) 80%,rgba(7,43,52,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(7,43,52,1) 0%,rgba(5,71,76,1) 54%,rgba(99,204,204,1) 57%,rgba(11,114,132,1) 60%,rgba(9,79,92,1) 80%,rgba(7,43,52,0) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(7,43,52,1) 0%,rgba(5,71,76,1) 54%,rgba(99,204,204,1) 57%,rgba(11,114,132,1) 60%,rgba(9,79,92,1) 80%,rgba(7,43,52,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#072b34', endColorstr='#00072b34',GradientType=0 ); /* IE6-9 */
+}
+
+#login {
+    display: inline;
+}
+
+#userinfo div {
+    display: inline;
+}
+
+#userinfo div.section {
+    margin-right: 40px;
+}
+
+#userinfo span.label {
+    margin-right: 5px;
+}
+
+#userinfo select.outfit {
+    background: rgb(7,43,52);
+    color: white;
+    border: 0;
 }
 
 #under-construction {
