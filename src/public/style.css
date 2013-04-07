@@ -1,5 +1,7 @@
 body {
     width: 100%;
+    margin: 0px;
+    padding: 0px;
     background: black;
     font-family: "Calibri", "Sans-Serif";
 }
@@ -20,6 +22,14 @@ body {
     bottom: 0px;
     left: 0px;
     right: 0px;
+}
+
+#map-coordinates {
+    z-index: 9999;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    background: grey;
 }
 
 #map-layer .map-controls {
@@ -70,6 +80,7 @@ body {
 
     color: white;
 
+    background: white;
     background: -moz-linear-gradient(top,  rgba(7,43,52,1) 0%, rgba(5,71,76,1) 54%, rgba(99,204,204,1) 57%, rgba(11,114,132,1) 60%, rgba(9,79,92,1) 80%, rgba(7,43,52,0) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(7,43,52,1)), color-stop(54%,rgba(5,71,76,1)), color-stop(57%,rgba(99,204,204,1)), color-stop(60%,rgba(11,114,132,1)), color-stop(80%,rgba(9,79,92,1)), color-stop(100%,rgba(7,43,52,0))); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top,  rgba(7,43,52,1) 0%,rgba(5,71,76,1) 54%,rgba(99,204,204,1) 57%,rgba(11,114,132,1) 60%,rgba(9,79,92,1) 80%,rgba(7,43,52,0) 100%); /* Chrome10+,Safari5.1+ */
@@ -96,7 +107,7 @@ body {
 }
 
 #userinfo select.outfit {
-    background: rgb(7,43,52);
+    background: rgb(7,3,52);
     color: white;
     border: 0;
 }
