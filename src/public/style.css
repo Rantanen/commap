@@ -65,6 +65,8 @@ body {
 
 #map-layer .map-owner-label {
     color: white;
+    margin: auto;
+    text-align: center;
     font-weight: bold;
     font-size: 120%;
     text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black, -1px -1px black, -1px 1px black, 1px 1px black, 1px -1px black;
