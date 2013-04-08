@@ -2,6 +2,7 @@
 <html>
 <!-- Woo handwritten html! -->
 <head>
+<link href='http://fonts.googleapis.com/css?family=Ropa+Sans' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="style.css" />
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
@@ -25,15 +26,36 @@
 </script>
 </head>
 <body>
-    <div id="map-layer">
-        <div id="map">
+    <div id="main-content">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="top-arch" viewBox="0 0 1000 500" preserveAspectRatio="xMinYMin">
+            <defs>
+                <filter id="line-blur">
+                    <feGaussianBlur stdDeviation="2" />
+                </filter>
+                <radialGradient id="bg-gradient" cx="50%" cy="125%" r="300%" >
+                    <stop offset="29%" style="stop-color: rgb( 4, 38, 45 ); stop-opacity: 0" />
+                    <stop offset="35%" style="stop-color: rgb( 4, 28, 35 ); stop-opacity: 0.75" />
+                    <stop offset="40%" style="stop-color: rgb( 4, 28, 35 )" />
+                </radialGradient>
+            </defs>
+            <path d="M 0 0 L 0 200 Q 130 190 320 190 L 680 190 Q 870 190 1000 200 L 1000 0 q" stroke="none" fill="url(#bg-gradient)" />
+            <path d="M 0 50 Q 130 40 320 40 L 345 20 Q 500 10 655 20 L 680 40 Q 870 40 1000 50" stroke="rgb( 40, 97, 102 )" stroke-width="3" fill="none" filter="url(#line-blur)" />
+            <path d="M 0 50 Q 130 40 320 40 L 345 20 Q 500 10 655 20 L 680 40 Q 870 40 1000 50" stroke="rgb( 40, 97, 102 )" stroke-width="2" fill="none" />
+        </svg>
+
+        <h1 class="continent">Indar</h1>
+
+        <div id="usercontrols">
+        </div>
+
+        <div id="map-selection">
+        </div>
+
+        <div id="map-container">
         </div>
 
         <div id="map-coordinates">
         </div>
-    </div>
-
-    <div id="header">
     </div>
 
     <div class="github-fork-ribbon-wrapper right-bottom">

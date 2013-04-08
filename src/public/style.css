@@ -6,23 +6,45 @@ body {
     font-family: "Calibri", "Sans-Serif";
 }
 
-#map-layer {
+#main-content, #map-container, #map {
     position: absolute;
-    background: #222;
-    width: 100%;
+    left: 0px;
     right: 0px;
-    top: 30px;
+    top: 0px;
     bottom: 0px;
 }
 
 #map {
     background: black;
+}
+
+#top-arch {
     position: absolute;
     top: 0px;
-    bottom: 0px;
     left: 0px;
     right: 0px;
+    width: 100%;
+    pointer-events: none;
+    z-index: 1000;
 }
+
+h1.continent {
+    pointer-events: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #f3fefd;
+    font-family: "Ropa Sans";
+    font-weight: 400;
+    font-size: 3.2em;
+    margin-top: 50px;
+    text-shadow: 0px 0px 15px rgba( 160, 219, 217, 255 );
+    z-index: 9999;
+}
+
 
 #map-coordinates {
     z-index: 9999;
@@ -32,38 +54,100 @@ body {
     background: grey;
 }
 
-#map-layer .map-controls {
+#map .map-controls {
 }
 
-#map-layer .map-controls .active {
-    background: #444 !important;
+#map .map-controls .toolbar-top {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 51px;
+    width: 238px;
+    background: url(toolbar_top.png);
 }
 
-#map-layer .map-controls .button {
-    background: black;
+#map .map-controls .toolbar-middle {
+    position: absolute;
+    left: 0px;
+    width: 238px;
+    top: 51px;
+    bottom: 19px;
+    background: #0c2a2f;
+}
+
+#map .map-controls .toolbar-bottom {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    height: 19px;
+    width: 238px;
+    background: url(toolbar_bottom.png);
+}
+
+#map .map-controls .toolbar-controls {
+    padding: 5px;
+    padding-top: 1em;
+    font-family: "Ropa Sans";
+    color: #f3f3fd;
+    position: relative;
+    z-index: 999;
+}
+
+#map .map-controls .toolbar-controls .toolbar-title {
+    padding-left: 0.5em;
+    font-size: 2em;
+    text-shadow: 0px 0px 5px rgb( 160, 219, 217 );
+}
+
+#map .map-controls .toolbar-controls .control-category {
+    margin-top: 2..55em;
+    margin-bottom: 2em;
+}
+
+#map .map-controls .toolbar-controls .control-category-label {
+    padding-left: 0.3em;
+    font-size: 1.5em;
+    text-shadow: 0px 0px 3px rgb( 160, 219, 217 );
+}
+
+
+.leaflet-top {
+    top: 133px !important;
+}
+
+#map .map-controls .control-category {
+    margin: 5px;
+}
+
+#map .map-controls .button {
+    background: rgb( 2, 19, 22 );
     border: solid 1px white;
     border-radius: 15px;
     overflow: hidden;
-    margin: 5px;
-    padding: 5px;
+    margin: 2px;
+    padding: 2px;
     text-align: center;
     color: white;
+    float: left;
 }
 
-#map-layer .map-controls .button img {
+#map .map-controls .button-label {
+    display: none;
+}
+
+#map .map-controls .active {
+    background: rgb( 130, 189, 187 ) !important;
+    border: solid 1px black;
+}
+
+#map .map-controls .button img {
     width: 64px;
     height: 64px;
+    padding: 0px;
+    margin: 0px;
 }
 
-#map-controls div.control {
-    margin: auto;
-    text-align: center;
-    padding: 5px;
-    color: white;
-    border-bottom: solid 2px white;
-}
-
-#map-layer .map-owner-label {
+#map .map-owner-label {
     color: white;
     margin: auto;
     text-align: center;
@@ -72,35 +156,19 @@ body {
     text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black, -1px -1px black, -1px 1px black, 1px 1px black, 1px -1px black;
 }
 
-#header {
+#usercontrols {
+    z-index: 9999;
     position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    padding: 10px 20px;
-    height: 33px;
+    top: 2em;
+    left: 2em;
 
-    color: white;
-
-    background: white;
-    background: -moz-linear-gradient(top,  rgba(7,43,52,1) 0%, rgba(5,71,76,1) 54%, rgba(99,204,204,1) 57%, rgba(11,114,132,1) 60%, rgba(9,79,92,1) 80%, rgba(7,43,52,0) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(7,43,52,1)), color-stop(54%,rgba(5,71,76,1)), color-stop(57%,rgba(99,204,204,1)), color-stop(60%,rgba(11,114,132,1)), color-stop(80%,rgba(9,79,92,1)), color-stop(100%,rgba(7,43,52,0))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  rgba(7,43,52,1) 0%,rgba(5,71,76,1) 54%,rgba(99,204,204,1) 57%,rgba(11,114,132,1) 60%,rgba(9,79,92,1) 80%,rgba(7,43,52,0) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  rgba(7,43,52,1) 0%,rgba(5,71,76,1) 54%,rgba(99,204,204,1) 57%,rgba(11,114,132,1) 60%,rgba(9,79,92,1) 80%,rgba(7,43,52,0) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  rgba(7,43,52,1) 0%,rgba(5,71,76,1) 54%,rgba(99,204,204,1) 57%,rgba(11,114,132,1) 60%,rgba(9,79,92,1) 80%,rgba(7,43,52,0) 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  rgba(7,43,52,1) 0%,rgba(5,71,76,1) 54%,rgba(99,204,204,1) 57%,rgba(11,114,132,1) 60%,rgba(9,79,92,1) 80%,rgba(7,43,52,0) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#072b34', endColorstr='#00072b34',GradientType=0 ); /* IE6-9 */
-}
-
-#login {
-    display: inline;
+    color: #88dddf;
 }
 
 #login .name-prompt {
     margin-right: 1em;
     font-style: italic;
     font-weight: lighter;
-    color: #88dddf;
     font-size: 100%;
 }
 
@@ -127,16 +195,5 @@ body {
     background: rgb(7,3,52);
     color: white;
     border: 0;
-}
-
-#under-construction {
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    top: 200px;
-    z-index: 9999;
-    color: red;
-    font-size: 500%;
-    text-align: center;
 }
 
