@@ -21,7 +21,6 @@
 <script src="/socket.io/socket.io.js"></script>
 <script src="/js/jquery.cookie.js"></script>
 
-<script src="outfits.js"></script>
 <script src="client.js">
 </script>
 </head>
@@ -38,12 +37,12 @@
                     <stop offset="40%" style="stop-color: rgb( 4, 28, 35 )" />
                 </radialGradient>
             </defs>
-            <path d="M 0 0 L 0 200 Q 130 190 320 190 L 680 190 Q 870 190 1000 200 L 1000 0 q" stroke="none" fill="url(#bg-gradient)" />
+            <path d="M 0 0 L 0 200 Q 130 190 320 190 L 680 190 Q 870 190 1000 200 L 1000 0 z" stroke="none" fill="url(#bg-gradient)" />
             <path d="M 0 50 Q 130 40 320 40 L 345 20 Q 500 10 655 20 L 680 40 Q 870 40 1000 50" stroke="rgb( 40, 97, 102 )" stroke-width="3" fill="none" filter="url(#line-blur)" />
             <path d="M 0 50 Q 130 40 320 40 L 345 20 Q 500 10 655 20 L 680 40 Q 870 40 1000 50" stroke="rgb( 40, 97, 102 )" stroke-width="2" fill="none" />
         </svg>
 
-        <h1 class="continent">Indar</h1>
+        <h1 id="continent"></h1>
 
         <div id="usercontrols">
         </div>

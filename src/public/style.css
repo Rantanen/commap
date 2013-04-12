@@ -4,6 +4,7 @@ body {
     padding: 0px;
     background: black;
     font-family: "Calibri", "Sans-Serif";
+    cursor: default;
 }
 
 #main-content, #map-container, #map {
@@ -28,8 +29,7 @@ body {
     z-index: 1000;
 }
 
-h1.continent {
-    pointer-events: none;
+#continent {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -42,7 +42,25 @@ h1.continent {
     font-size: 3.2em;
     margin-top: 50px;
     text-shadow: 0px 0px 15px rgba( 160, 219, 217, 255 );
-    z-index: 9999;
+    z-index: 99999;
+}
+
+#continent h1 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+}
+
+#continent h2 {
+    display: inline;
+    margin: 0px auto;
+    padding: 0.1em;
+    font-size: 0.9em;
+}
+
+#continent h2:hover {
+    text-shadow: 0px 0px 15px rgba( 160, 219, 217, 255 );
+    color: black;
 }
 
 
