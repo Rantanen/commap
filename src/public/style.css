@@ -57,16 +57,37 @@ h1.continent {
 #map .map-controls {
 }
 
-#map .map-controls .toolbar-top {
+#map .toolbar-top-right,
+#map .toolbar-top-left,
+#map .toolbar-middle,
+#map .toolbar-bottom {
+    opacity: 0.7;
+}
+
+#map .toolbar {
+    width: 238px;
+    margin-left: 10px;
+}
+
+#map .toolbar-top-left {
     position: absolute;
     left: 0px;
     top: 0px;
     height: 51px;
     width: 238px;
-    background: url(toolbar_top.png);
+    background: url(toolbar_top_left.png);
 }
 
-#map .map-controls .toolbar-middle {
+#map .toolbar-top-right {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 51px;
+    width: 238px;
+    background: url(toolbar_top_right.png);
+}
+
+#map .toolbar-middle {
     position: absolute;
     left: 0px;
     width: 238px;
@@ -75,13 +96,25 @@ h1.continent {
     background: #0c2a2f;
 }
 
-#map .map-controls .toolbar-bottom {
+#map .toolbar-bottom {
     position: absolute;
     left: 0px;
     bottom: 0px;
     height: 19px;
     width: 238px;
     background: url(toolbar_bottom.png);
+}
+
+#map .leaflet-control-layers {
+    /*width: 238px;*/
+    color: #f3f3fd;
+    font-family: "Ropa Sans";
+    font-size: 1.5em;
+    margin: 1em;
+    z-Index: 9999;
+    background: transparent !important;
+    float: none;
+    box-shadow: none;
 }
 
 #map .map-controls .toolbar-controls {
